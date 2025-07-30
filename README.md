@@ -1,20 +1,19 @@
 # Projeto Curso Java - Coti Informática
-O projeto inicial trata-se de uma introdução ao mundo Java e POO.
 
-Explicação do projeto:
-- A Classe PedidoController, recebe informações que o usuário inputará, como por exemplo, nom do cliente, valor do produto, descrição e qual status do produto.
+Este projeto é uma introdução ao mundo Java e à Programação Orientada a Objetos (POO).
 
-- A Classe Enums, é a classe onde tem um método com informações do status do produto, se o mesmo está no status "PENDENTE, PROCESSANDO, ENVIADO, ENTREGUE, CANCELADO" 
+## Explicação do Projeto
 
-- A Classe Pedido Repositories, abre conexão co o banco de dados, insere a query de inserção do produto e ao termino fecha a conexão com o banco de dados.
+- **PedidoController**: Responsável por receber as informações inseridas pelo usuário, como nome do cliente, valor do produto, descrição e status do pedido.
 
-- O Package Pedido, reuno os atributos que um pedido deve ter, logo eles encontram-se privados, e logo são realizados métodos "geters and setters", para que outra classe possa fazer um reuso.
+- **Enums**: Classe que define os possíveis status do pedido: `PENDENTE`, `PROCESSANDO`, `ENVIADO`, `ENTREGUE`, `CANCELADO`.
 
-- A Classe ConnectionFactory, cria a conexão com o banco de dados.
+- **PedidoRepository**: Abre a conexão com o banco de dados, executa a query de inserção do pedido e, ao final, fecha a conexão.
 
- Para fechar também coloquei um script chamado scripts.sql onde cria tabela no postgresql e um docker-compose.yml onde cria um contaienr com PostGresql.
+- **Pedido**: Classe que reúne os atributos de um pedido. Os atributos são privados e acessados por meio de métodos getters e setters, permitindo o reuso por outras classes.
 
+- **ConnectionFactory**: Responsável por criar a conexão com o banco de dados.
 
-
+Além disso, o projeto inclui um script chamado `scripts.sql`, que cria a tabela no PostgreSQL, e um arquivo `docker-compose.yml`, que configura um container com PostgreSQL.
 
 ![alt text](image.png)
