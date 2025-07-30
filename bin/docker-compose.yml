@@ -1,0 +1,15 @@
+services:
+ postgres: # Nome do serviço
+   image: postgres:16 #Imagem (instalador) do PostGreSQL versão 16
+   container_name: postgres_pedidos #Nome do container
+   restart: always #Reiniciar o container ao abrir o docker
+   environment: #Configurações do PostGreSQL
+     POSTGRES_DB: pedidos_db #Nome do banco de dados
+     POSTGRES_USER: pedidos_user #Usuário para acesso ao banco de dados
+     POSTGRES_PASSWORD: MilDisMIl100 #Senha do usuário
+   ports: #Portas para execução do banco
+     - "5434:5432" #Porta no windows | Pota no Docker
+   volumes: #Local onde serão gravados os dados do banco
+     - postgres_data:/var/lib/postgresql/data #Caminho da pasta
+volumes: #Criando o local para salvar os dados
+ postgres_data: #Nome do local configurado
